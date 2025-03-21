@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/product.js" type="module"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="/images/noun_Tent_2517.svg" alt="Tent Logo">
+            <a href="/index.html">Sleep<span class="highlight">Outside</span></a>
+        </div>
+    
+        <!-- ✅ Clickable Cart Icon -->
+        <a href="/cart/index.html" class="cart-icon">
+            <img src="/images/noun_Backpack_65884.svg" alt="Cart">
+            <span class="cart-count">0</span>
+        </a>
+    </header>
+    
+    
+
+    <main class="divider">
+        <section class="product-detail">
+            <h3 id="productBrand"></h3>
+            <h2 id="productName" class="divider"></h2>
+            <img id="productImage" class="divider" src="" alt="" />
+            <p id="productPrice" class="product-card__price"></p>
+            <p id="productColor" class="product__color"></p>
+            <p id="productDescription" class="product__description"></p>
+
+            <div class="product-detail__add">
+                <button id="addToCart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>&copy; NOT a real business</footer>
+    <script src="/js/cartUtils.js" type="module"></script>
+    <script type="module" src="../js/cart.js"></script>
+
+</body>
+</html>
