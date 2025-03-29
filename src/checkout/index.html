@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Sleep Outside</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/checkout.css">
+</head>
+<body>
+  <header class="divider" id="header-container">
+    <!-- Header will be loaded by utils.mjs -->
+  </header>
+  
+  <main class="divider">
+    <div class="checkout-container">
+      <h1>Checkout</h1>
+      
+      <form name="checkout" id="checkout-form">
+        <div id="checkout-message" class="checkout-message"></div>
+        
+        <div class="checkout-columns">
+          <div class="checkout-form-column">
+            <section class="checkout-section">
+              <h2>Customer Information</h2>
+              <div class="form-control">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" required>
+              </div>
+              <div class="form-control">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" required>
+              </div>
+            </section>
+            
+            <section class="checkout-section">
+              <h2>Shipping Address</h2>
+              <div class="form-control">
+                <label for="street">Street Address</label>
+                <input type="text" id="street" name="street" required>
+              </div>
+              <div class="form-control">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+              </div>
+              <div class="form-row">
+                <div class="form-control">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" required>
+                </div>
+                <div class="form-control">
+                  <label for="zip">Zip Code</label>
+                  <input type="text" id="zip" name="zip" required>
+                </div>
+              </div>
+            </section>
+            
+            <section class="checkout-section">
+              <h2>Payment Information</h2>
+              <div class="form-control">
+                <label for="cardNumber">Credit Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+              </div>
+              <div class="form-row">
+                <div class="form-control">
+                  <label for="expiration">Expiration Date</label>
+                  <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
+                </div>
+                <div class="form-control">
+                  <label for="code">Security Code</label>
+                  <input type="text" id="code" name="code" required>
+                </div>
+              </div>
+            </section>
+          </div>
+          
+          <div class="order-summary-column">
+            <section class="order-summary">
+              <h2>Order Summary</h2>
+              <div class="summary-items">
+                <!-- Cart items will be displayed here -->
+                <p class="loading-items">Loading your items...</p>
+              </div>
+              <div class="summary-totals">
+                <div class="summary-line">
+                  <span>Subtotal:</span>
+                  <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-line">
+                  <span>Tax (6%):</span>
+                  <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-line">
+                  <span>Shipping:</span>
+                  <span id="shipping">$0.00</span>
+                </div>
+                <div class="summary-line total">
+                  <span>Order Total:</span>
+                  <span id="order-total">$0.00</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        
+        <div class="checkout-actions">
+          <a href="/cart/index.html" class="back-to-cart">Back to Cart</a>
+          <button type="submit" id="checkout-button">Place Order</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <footer id="footer-container"></footer>
+  
+  <script type="module" src="../js/checkout.js"></script>
+  <script src="../js/DynamicFooter.js"></script>
+  <script src="../js/cartUtils.js" type="module"></script>
+  <script type="module" src="../js/cart.js"></script>
+  <script src="../js/utils.mjs"  type="module"></script>
+
+</body>
+</html>
+

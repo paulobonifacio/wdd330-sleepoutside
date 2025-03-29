@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | Outdoor Gear</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <header id="header-container" class="divider"> </header>
+
+
+  <main class="divider">
+
+    <div class="cart-container">
+      <h1>Shopping Cart</h1>
+      
+      <section class="cart-items">
+        <h2>Your Cart</h2>
+        <ul class="product-list">
+          <!-- Cart items will be loaded here -->
+          <li>Loading cart items...</li>
+        </ul>
+        <div class="cart-price">
+          <!-- Total price will be loaded here -->
+        </div>
+        <div class="cart-footer">
+          <a href="/" class="continue-shopping">Continue Shopping</a>
+          <button class="checkout-button">Checkout</button>
+        </div>
+      </section>
+      
+      <!-- Wishlist section will be added here by JavaScript -->
+    </div>
+  </main>
+  
+  <footer id="footer-container"></footer>
+  
+  <script src="../js/DynamicFooter.js"></script>
+  <script type="module">
+    import { initWishlist } from '/js/wishlist.js';
+    import { initAuth } from '/js/auth.js';
+    
+    // Initialize auth system
+    initAuth();
+    
+    // Initialize wishlist functionality
+    initWishlist();
+  </script>
+  <script type="module" src="/js/cart.js"></script>
+</body>
+</html>
+

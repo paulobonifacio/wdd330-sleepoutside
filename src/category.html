@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header id="header-container" class="divider"> </header>
+
+<!--    
+    <header class="divider">
+        <div class="logo">
+            <img src="/images/noun_Tent_2517.svg" alt="Tent Logo">
+            <a href="index.html"> Sleep<span class="highlight">Outside</span></a>
+        </div>
+    
+        <div class="header-right">
+            <form id="searchBox" class="search-form">
+                <input type="text" id="searchInput" placeholder="Search for a product..." />
+                <button type="submit">🔍</button>
+            </form>
+    
+            <a href="/cart/index.html" class="cart-icon">
+                <img src="/images/noun_Backpack_65884.svg" alt="Cart">
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>  -->
+
+    <nav id="breadcrumb" class="breadcrumb"></nav>
+
+    <h1 id="category-title"></h1>
+    <div class="sorting-options">
+        <label for="sort-by">Sort by:</label>
+        <select id="sort-by">
+            <option value="default">Default</option>
+            <option value="name">Name (A-Z)</option>
+            <option value="price-low-high">Price (Low to High)</option>
+            <option value="price-high-low">Price (High to Low)</option>
+        </select>
+    </div>
+    
+    <main class="divider">
+        <ul id="product-list" class="product-list"></ul>
+        <!-- Modal Structure -->
+<div id="quickViewModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;  </span>
+        <div id="modal-body"></div>
+    </div>
+</div>
+    </main>
+    <footer id="footer-container"></footer>
+    <script type="module" src="js/DynamicFooter.js"></script> 
+
+    <script src="/js/cartUtils.js" type="module"></script>
+    <script type="module" src="../js/cart.js"></script>
+    <script src="js/category.js" type="module"></script>
+
+    <script type="module"> 
+        import Alert from './js/Alert.js'
+        const alert =  new Alert('./json/alerts.json')
+        alert.fetchAlerts()
+      </script>
+</body>
+</html>
