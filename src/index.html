@@ -48,12 +48,13 @@
               d="M60.1 71.4v3.3h-5.2v-3.4c-1.7-0.3-3.3-0.7-4.6-1 -0.9 6.8-1.1 13.3-0.3 14.5 0.4 0.3 2.9 1.1 8 1.1h0c5 0 8.8-0.7 9.7-1.3 0.8-1.3 0.6-7.7-0.4-14.4C65.5 70.5 62.7 71.1 60.1 71.4z"
             />
 
-            <!-- <text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Natalia Woodroffe</text>
-            <text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text> -->
           </svg>         
         </a>
       </div>
-    <main class="divider">
+    
+      
+    
+      <main class="divider">
       <div class="hero">
         <img
           src="/images/banner-sm.jpg"
@@ -65,6 +66,7 @@
           <div>Sleep<span class="highlight">Outside</span></div>
         </div>
       </div>
+   
       <section class="mission">
         <p>We spend too much time these days indoors...sitting usually.</p>
         <p>No wonder we are a mess!</p>
@@ -100,75 +102,80 @@
                     <path d="M6 8h12M6 16h12" stroke="#000" stroke-width="2"/>
                 </svg>
                 <h3>Sleeping Bags</h3>
-            </a>
+            </a> 
+
+
+            <a href="category.html?category=hammocks">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="60" width="60">
+    
+                <line stroke-width="2" stroke="black" y2="22" x2="4" y1="2" x1="4"></line>
+                <line stroke-width="2" stroke="black" y2="22" x2="20" y1="2" x1="20"></line>
+                
+                
+                <path fill="none" stroke-width="2" stroke="black" d="M4 10 Q12 20, 20 10"></path>
+            
+                
+                <line stroke-width="2" stroke="black" y2="12" x2="6" y1="10" x1="4"></line>
+                <line stroke-width="2" stroke="black" y2="12" x2="18" y1="10" x1="20"></line>
+            </svg>
+              <h3>Hammocks</h3>
+          </a>
         </div>
     </section>
     
-    
-
-      <!-- <section class="products">
-        <h2>Top Products</h2>
-        <ul class="product-list">
-          <li class="product-card">
-            <a href="product_pages/?product=880RR">
-              <img
-                src="images/tents/marmot-ajax-tent-3-person-3-season-in-pale-pumpkin-terracotta~p~880rr_01~320.jpg"
-                alt="Marmot Ajax tent"
-              />
-              <h3 class="card__brand">Marmot</h3>
-              <h2 class="card__name">Ajax Tent - 3-Person, 3-Season</h2>
-              <p class="product-card__price">$199.99</p></a
-            >
-          </li>
-          <li class="product-card">
-            <a href="product_pages/?product=985RF">
-              <img
-                src="images/tents/the-north-face-talus-tent-4-person-3-season-in-golden-oak-saffron-yellow~p~985rf_01~320.jpg"
-                alt="Talus Tent - 4-Person, 3-Season"
-              />
-              <h3 class="card__brand">The North Face</h3>
-              <h2 class="card__name">Talus Tent - 4-Person, 3-Season</h2>
-              <p class="product-card__price">$199.99</p></a
-            >
-          </li>
-          <li class="product-card">
-            <a href="product_pages/?product=985PR">
-              <img
-                src="images/tents/the-north-face-alpine-guide-tent-3-person-4-season-in-canary-yellow-high-rise-grey~p~985pr_01~320.jpg"
-                alt="Alpine Guide Tent - 3-Person, 4-Season"
-              />
-              <h3 class="card__brand">The North Face</h3>
-              <h2 class="card__name">Alpine Guide Tent - 3-Person, 4-Season</h2>
-              <p class="product-card__price">$349.99</p></a
-            >
-          </li>
-          <li class="product-card">
-            <a href="product_pages/?product=344YJ">
-              <img
-                src="images/tents/cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.jpg"
-                alt="Rimrock Tent - 2-Person, 3-Season"
-              />
-              <h3 class="card__brand">Cedar Ridge</h3>
-              <h2 class="card__name">Rimrock Tent - 2-Person, 3-Season</h2>
-              <p class="product-card__price">$69.99</p></a
-            >
-          </li>
-        </ul>
-      </section>   -->
-    
     </main>
+<!-- Registration Modal -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Register & Win a Giveaway! 🎁</h2>
+      <p>Sign up now and enter our exclusive giveaway for a chance to win amazing prizes!</p>
+      <p>Hurry up !Exciting discounts and cashbacks are waiting for you.</p>
+
+      <button id="registerBtn">Register Now</button>
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+<div class="newsletter-box">
+  <h3>Subscribe to Our Newsletter</h3>
+  <p>Stay updated with the latest news and updates.</p>
+  <input type="email" id="email" placeholder="Enter your email" required>
+  <button onclick="subscribeNewsletter()">Subscribe</button>
+  <p id="message"></p>
+</div>
+    <footer id="footer-container">
+      
+    </footer>
+   
     <section id="alert-section" class="alert-list"></section>
     <!-- Custom Alert Box -->
     <div id="custom-alert-container"></div>
-
-    <!-- alerts.js -->
-    <script src="./js/alerts.js"></script>
-
-    <footer>&copy;NOT a real business</footer>
+    <!-- <footer>&copy;NOT a real business</footer> -->
     <script src="js/search.js" type="module"></script>
     <script src="js/cartUtils.js" type="module"></script>
     <script src="js/cart.js" type="module"></script>
+    <script type="module" src="js/DynamicFooter.js"></script> 
 
+    <!--below is the script to handle newslater-->
+<script>
+  function subscribeNewsletter() {
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message");
+
+    if (email.includes("@") && email.includes(".")) {
+        message.style.color = "green";
+        message.innerText = "Subscribed successfully!";
+        document.getElementById("email").value = "";
+        // Here you can add an API call to store the email in a database
+    } else {
+        message.style.color = "red";
+        message.innerText = "Please enter a valid email address.";
+    }
+}
+
+</script>
+  
   </body>
 
 </html>
